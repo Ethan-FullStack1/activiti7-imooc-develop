@@ -1,0 +1,10 @@
+安装，启动操作
+npm install --legacy-peer-deps
+npm run dev
+
+
+表单编号
+FormProperty_2m9l717-_!string-_!姓名-_!请填写姓名-_!f
+FormProperty_0kacpjr-_!long-_!年龄-_!无-_!s
+
+控件id-_!控件值-_!是否参数!_!控件id-_!控件值-_!是否参数

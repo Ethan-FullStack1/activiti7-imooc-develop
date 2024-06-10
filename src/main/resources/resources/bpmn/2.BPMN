@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                   xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                   xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                   xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                   xmlns:flowable="http://flowable.org/bpmn"
+                   id="diagram_Process_1717913659469"
+                   targetNamespace="http://flowable.org/bpmn">
+    <bpmn2:process id="Process_1form" name="动态表单" isExecutable="true">
+        <bpmn2:startEvent id="Event_1v99v6h">
+            <bpmn2:extensionElements>
+                <flowable:formData/>
+            </bpmn2:extensionElements>
+            <bpmn2:outgoing>Flow_1poqucu</bpmn2:outgoing>
+        </bpmn2:startEvent>
+        <bpmn2:userTask id="Activity_1wdguva" name="八戒动态表单1"
+                        flowable:formKey="Activity_1wdguva"
+                        flowable:assignee="user1">
+            <bpmn2:extensionElements>
+                <flowable:formData>
+                    <flowable:formField id="FormProperty_3820afg" label="6"
+                                        type="string" defaultValue="7"/>
+                </flowable:formData>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>Flow_1poqucu</bpmn2:incoming>
+            <bpmn2:outgoing>Flow_0sj23b7</bpmn2:outgoing>
+        </bpmn2:userTask>
+        <bpmn2:sequenceFlow id="Flow_1poqucu" sourceRef="Event_1v99v6h"
+                            targetRef="Activity_1wdguva"/>
+        <bpmn2:userTask id="Activity_0b4echb" name="八戒动态表单2">
+            <bpmn2:extensionElements>
+                <flowable:formData/>
+            </bpmn2:extensionElements>
+            <bpmn2:incoming>Flow_0sj23b7</bpmn2:incoming>
+            <bpmn2:outgoing>Flow_1vjy9nr</bpmn2:outgoing>
+        </bpmn2:userTask>
+        <bpmn2:sequenceFlow id="Flow_0sj23b7" sourceRef="Activity_1wdguva"
+                            targetRef="Activity_0b4echb"/>
+        <bpmn2:endEvent id="Event_00zners">
+            <bpmn2:incoming>Flow_1vjy9nr</bpmn2:incoming>
+        </bpmn2:endEvent>
+        <bpmn2:sequenceFlow id="Flow_1vjy9nr" sourceRef="Activity_0b4echb"
+                            targetRef="Event_00zners"/>
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+        <bpmndi:BPMNPlane id="Process_1form_di" bpmnElement="Process_1form">
+            <bpmndi:BPMNEdge id="Flow_1poqucu_di" bpmnElement="Flow_1poqucu">
+                <di:waypoint x="138" y="290"/>
+                <di:waypoint x="190" y="290"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="Flow_0sj23b7_di" bpmnElement="Flow_0sj23b7">
+                <di:waypoint x="290" y="290"/>
+                <di:waypoint x="350" y="290"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge id="Flow_1vjy9nr_di" bpmnElement="Flow_1vjy9nr">
+                <di:waypoint x="450" y="290"/>
+                <di:waypoint x="512" y="290"/>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNShape id="Event_1v99v6h_di" bpmnElement="Event_1v99v6h">
+                <dc:Bounds x="102" y="272" width="36" height="36"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Activity_1wdguva_di"
+                              bpmnElement="Activity_1wdguva">
+                <dc:Bounds x="190" y="250" width="100" height="80"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Activity_0b4echb_di"
+                              bpmnElement="Activity_0b4echb">
+                <dc:Bounds x="350" y="250" width="100" height="80"/>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape id="Event_00zners_di" bpmnElement="Event_00zners">
+                <dc:Bounds x="512" y="272" width="36" height="36"/>
+            </bpmndi:BPMNShape>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

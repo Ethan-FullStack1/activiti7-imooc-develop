@@ -1,0 +1,2 @@
+-- 拼接SQL将activiti7自动生成的表名改成小写。
+select concat('alter table ',table_name,' rename ',lower(table_name),';') as statement from information_schema.TABLES where TABLE_SCHEMA = 'activiti7-imooc' and TABLE_NAME like 'ACT%';

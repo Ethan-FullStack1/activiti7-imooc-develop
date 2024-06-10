@@ -1,0 +1,44 @@
+{
+  "name": "bpmn-js-example-commonjs",
+  "version": "0.0.0",
+  "description": "An example how to bundle an app using bpmn-js for the browser",
+  "main": "src/app.js",
+  "scripts": {
+    "all": "run-s bundle open",
+    "build": "webpack",
+    "build:es5": "webpack --config webpack.es5.config.js",
+    "build:watch": "webpack -w",
+    "open": "opn ./public/index.html",
+    "dev": "npm run bundle:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpmn-io/bpmn-js-examples"
+  },
+  "keywords": [
+    "bpmnjs-example"
+  ],
+  "author": {
+    "name": "Nico Rehwaldt",
+    "url": "https://github.com/nikku"
+  },
+  "contributors": [
+    {
+      "name": "bpmn.io contributors",
+      "url": "https://github.com/bpmn-io"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/preset-env": "^7.19.0",
+    "babel-loader": "^8.2.5",
+    "npm-run-all": "^4.1.2",
+    "opn-cli": "^4.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "bpmn-js": "^11.1.1"
+  }
+}

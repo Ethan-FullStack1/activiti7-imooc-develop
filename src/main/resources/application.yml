@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  profiles:
+    active: mac
+  datasource:
+     driver-class-name: com.mysql.cj.jdbc.Driver
+  # activiti7历史表创建
+  activiti:
+    history-level: full # 一共是存在三个级别，不同的级别存储的信息粒度不一样，full就是完整存储。
+    db-history-used: true
+    # 自动部署，自动部署的意思是，如果把bpmn文件放到Resource下的一个固定文件名称下，
+    # 每次启动他都会检查这个文件夹里面的内容，并且自动部署。这个功能在任何情况下都是不需要的。
+    # 所以要把自动部署关掉.
+    check-process-definitions: false

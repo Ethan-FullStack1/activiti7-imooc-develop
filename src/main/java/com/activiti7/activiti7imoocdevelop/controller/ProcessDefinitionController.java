@@ -119,7 +119,7 @@ public class ProcessDefinitionController {
 
         try {
             List<ProcessDefinition> list =
-                    repositoryService.createProcessDefinitionQuery()
+                    repositoryService.createProcessDefinitionQuery().orderByProcessDefinitionId().desc()
                     .list();
             if (!CollectionUtils.isEmpty(list)) {
                 list.forEach(pd -> {

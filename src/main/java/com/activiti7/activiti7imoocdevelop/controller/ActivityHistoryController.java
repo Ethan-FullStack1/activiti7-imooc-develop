@@ -165,7 +165,7 @@ public class ActivityHistoryController {
             Map<String, Object> reMap = Maps.newHashMap();
             reMap.put("highLine", highLine);
             reMap.put("highPoint", highPoint);
-            reMap.put("waiitngToDo", waiitngTodo);
+            reMap.put("waitingToDo", waiitngTodo);
             reMap.put("iDo", iDone);
 
             return AjaxResponse.ajaxData(ResponseCode.SUCCESS.getCode(),

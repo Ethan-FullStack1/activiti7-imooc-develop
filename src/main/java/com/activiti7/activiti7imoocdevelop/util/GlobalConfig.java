@@ -9,8 +9,15 @@ package com.activiti7.activiti7imoocdevelop.util;
 public class GlobalConfig {
 
     public static final Boolean Test = false;
-    public static final String BPMN_PathMapping = "file:/usr/local/githubcode" +
-            "/activiti7-imooc-develop/src/main/resources/resources/bpmn/";
+
+    // linux
+    // public static final String BPMN_PathMapping = "file:/usr/local/githubcode" +
+    //         "/activiti7-imooc-develop/src/main/resources/resources/bpmn/";
+
+    // windows
+    public static final String BPMN_PathMapping = "file:D:\\githubcode" +
+            "\\activiti7-imooc-develop\\src\\main\\resources\\resources\\bpmn" +
+            "\\";
 
 
 }
